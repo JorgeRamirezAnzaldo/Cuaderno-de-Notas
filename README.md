@@ -1,2 +1,1 @@
-# Cuaderno-de-Notas
-Repositorio para el cuaderno de notas
+# Código de inicio para Bloc de notas
