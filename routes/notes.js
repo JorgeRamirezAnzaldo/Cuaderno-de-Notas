@@ -13,8 +13,7 @@ const FileReadAdd = (text, file) => {
         array.push(text);
         const str = JSON.stringify(array, null, 4);
         fs.writeFile(file, str, (err) =>
-         err ? console.error(err) : console.info(`\nData written to ${file}`)
-  );
+         err ? console.error(err) : console.info(`\nData written to ${file}`));
       }
     });
   };
@@ -24,8 +23,6 @@ notes.get("/", (req, res) => {
 });
 
 notes.post('/', (req, res) => {
-    console.log(req.body);
-  
     const { title, text } = req.body;
   
     if (req.body) {
@@ -34,7 +31,7 @@ notes.post('/', (req, res) => {
         text,
         id: uuidv4(),
       };
-  
+      console.log(newNote);
       FileReadAdd(newNote, './db/db.json');
       res.json(`Note added successfully`);
     } else {
