@@ -11,13 +11,11 @@ app.use("/api", api);
 app.use(express.static("public"));
 
 app.get("/notes", (req, res) => {
-    console.log("Notas");
     res.sendFile(path.join(__dirname, "/public/notes.html"));
 }
 );
 
 app.get("*", (req, res) =>{
-    console.log("Principal");
     res.sendFile(path.join(__dirname, "/public/index.html"));
 }
     

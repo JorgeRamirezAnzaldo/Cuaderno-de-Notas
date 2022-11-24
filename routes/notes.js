@@ -18,6 +18,25 @@ const FileReadAdd = (text, file) => {
     });
   };
 
+const FileReadDelete = (id, file) => {
+  fs.readFile(file, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      const array2 = JSON.parse(data);
+      const arraux = array2;
+      for (var i = 0; i < array2.length; i++){
+        if (arraux[i].id == id){
+          arraux.splice(i, 1);
+        }
+      }
+      const newstr = JSON.stringify(arraux, null, 4);
+      fs.writeFile(file, newstr, (err) =>
+       err ? console.error(err) : console.info(`\nData written to ${file}`));
+    }
+  });
+};
+
 notes.get("/", (req, res) => {
     FileRead("./db/db.json").then((data) => res.json(JSON.parse(data)));
 });
@@ -38,5 +57,20 @@ notes.post('/', (req, res) => {
       res.error('Error in adding note');
     }
   });
+
+  notes.delete('/:id', (req, res) => {
+    console.log(req.params.id);
+    if (req.params.id) {
+      const idDelete = req.params.id;
+      console.log(idDelete);
+      FileReadDelete(idDelete, './db/db.json');
+      res.json(`Note deleted successfully`);
+    } else {
+      res.error('Error in deleting note');
+    }
+  });
+
+
+
 
 module.exports = notes;
