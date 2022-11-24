@@ -1,1 +1,27 @@
-[]
+[
+    {
+        "title": "Junta Laboral",
+        "text": "Atender junta laboral sobre nuevo proyecto",
+        "id": "0d0d4315-191b-41f1-b488-60cbae273866"
+    },
+    {
+        "title": "Crear programas",
+        "text": "Construir programas de extracción asignados",
+        "id": "62557ddd-4b88-4d57-9a4a-cd81bb663e2d"
+    },
+    {
+        "title": "Documentación",
+        "text": "Documentar los programas construidos la semana pasada",
+        "id": "1c129cfa-0052-4444-b4ad-d7d2a355d476"
+    },
+    {
+        "title": "Cerrar tickets",
+        "text": "Cerrar tickets de soporte referentes a distintos issues",
+        "id": "7029820d-3fde-4688-abd8-89bf0d044d69"
+    },
+    {
+        "title": "Revisar grabaciones",
+        "text": "Revisar grabaciones sobre los demo dados por el equipo",
+        "id": "18468c93-baf6-4f49-bd03-c470a7d1e975"
+    }
+]
