@@ -64,7 +64,7 @@
 
 ## Enlace a aplicación
 
-* [Link a aplicación]()
+* [Link a aplicación](https://cuaderno-de-notas.herokuapp.com/)
 
 ## Apariencia de la aplicación
 
