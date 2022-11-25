@@ -22,7 +22,7 @@
     * Instalación del paquete npm uuid versión 8.3.2
 * Además, esta aplicación emplea:
     * El módulo util.
-    * El módulo fs para la lectura del archivo JSON "db.json" que contiene todas las notas guardadas.
+    * El módulo fs para la lectura y escritura del archivo JSON "db.json" que contiene todas las notas guardadas.
 
 ## Instrucciones para realizar pruebas 
 
