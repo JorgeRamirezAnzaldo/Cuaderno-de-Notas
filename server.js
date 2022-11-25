@@ -5,7 +5,7 @@ const path = require("path");
 //Import the index.js with the routes
 const api = require("./routes/index.js");
 //Define PORT 3001
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 //Initialize app variable
 const app = express();
 
